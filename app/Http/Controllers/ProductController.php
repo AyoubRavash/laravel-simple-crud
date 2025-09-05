@@ -117,7 +117,7 @@ class ProductController extends Controller
     {
         try {
             Product::withTrashed()->findOrFail($id)->restore();
-            return redirect()->route("product.index")->with("success", "Product restored successfully");
+            return redirect()->route("product.show-deleted")->with("success", "Product restored successfully");
         } catch (\Throwable $th) {
             return redirect()->route("product.index")->with("error", "An error occurred while restoring the product");
         }

@@ -8,7 +8,6 @@ Route::get('/products/{id}', [ProductController::class, 'show'])->name('product.
 Route::get('products/{id}/edit', [ProductController::class, 'edit'])->name('product.edit');
 Route::get('/create-product', [ProductController::class, 'create'])->name('product.create');
 Route::get('/deleted-products', [ProductController::class, 'showDestroyed'])->name('product.show-deleted');
-
 Route::get('products/{id}/restore', [ProductController::class, 'restore'])->name('product.restore');
 
 Route::delete('products/{id}/destroy', [ProductController::class, 'destroy'])->name('product.destroy');
